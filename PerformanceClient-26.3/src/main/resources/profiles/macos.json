@@ -1,0 +1,7 @@
+{
+  "path": "renderpearl,cpu-batching,vanilla",
+  "upload": "staging-unified-memory-aware",
+  "workers": 4,
+  "jvm_flags": "-XstartOnFirstThread -Xms2G -Xmx5G -XX:+UseG1GC",
+  "tested": false
+}

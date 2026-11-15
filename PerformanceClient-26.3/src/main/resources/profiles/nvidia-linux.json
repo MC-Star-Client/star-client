@@ -1,0 +1,5 @@
+{
+  "workers": 8,
+  "env": "verify threaded GL optimization; no GL calls for Vulkan",
+  "tested": false
+}

@@ -1,0 +1,27 @@
+{
+  "required": false,
+  "package": "dev.performanceclient.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "MinecraftFrameMixin",
+    "SectionRebuildBudgetMixin",
+    "EntityExtractDistanceMixin",
+    "WorldChangeGateMixin",
+    "GuiBenchmarkStatusMixin",
+    "CrosshairMixin",
+    "SelectionListGlassMixin",
+    "ScrollbarGlassMixin",
+    "ModsBackgroundMixin",
+    "GuiSetScreenMixin",
+    "MinecraftSetScreenMixin",
+    "LevelExtractorPhaseMixin",
+    "SectionGraphPhaseMixin",
+    "ParticlePhaseMixin",
+    "GuiPhaseMixin",
+    "GameRendererPhaseMixin",
+    "LevelRendererPhaseMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

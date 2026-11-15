@@ -1,0 +1,38 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+group = project.maven_group
+version = project.mod_version
+base { archivesName = project.archives_base_name }
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.fabricmc.net/' }
+}
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    implementation "net.fabricmc:fabric-loader:${loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+
+    // Gradle 9 requires discoverable tests; keep JUnit versions aligned.
+    testImplementation platform('org.junit:junit-bom:5.12.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+processResources {
+    inputs.property 'version', project.version
+    filesMatching('fabric.mod.json') { expand 'version': project.version }
+}
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+    options.encoding = 'UTF-8'
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+    withSourcesJar()
+}
+
+// The existing PackedMesherPoolSelfTest.main() is also run via a JUnit adapter.
+tasks.named('test', Test) {
+    useJUnitPlatform()
+}

@@ -1,0 +1,5 @@
+{
+  "window_system": "wayland-or-x11",
+  "env": "MESA_GLTHREAD may help ONLY OpenGL; do not force",
+  "tested": false
+}

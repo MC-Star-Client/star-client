@@ -1,0 +1,5 @@
+{
+  "workers": 8,
+  "env": "MESA_GLTHREAD optional for OpenGL; verify benchmark",
+  "tested": false
+}

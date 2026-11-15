@@ -1,0 +1,7 @@
+{
+  "path": "renderpearl,cpu-batching,vanilla",
+  "upload": "staging",
+  "region_mb": 48,
+  "workers": 4,
+  "tested": false
+}

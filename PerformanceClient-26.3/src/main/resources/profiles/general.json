@@ -1,0 +1,12 @@
+{
+  "path": "renderpearl,vanilla",
+  "upload": "staging",
+  "workers": 6,
+  "region_mb": 64,
+  "jvm_flags": "-Xms2G -Xmx6G -XX:+UseG1GC",
+  "env": "",
+  "preset_low_chunks": 8,
+  "preset_medium_chunks": 16,
+  "preset_high_chunks": 32,
+  "tested": false
+}

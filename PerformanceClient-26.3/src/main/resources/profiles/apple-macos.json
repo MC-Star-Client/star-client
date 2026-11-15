@@ -1,0 +1,5 @@
+{
+  "workers": 4,
+  "path": "renderpearl,cpu-batching,vanilla",
+  "tested": false
+}

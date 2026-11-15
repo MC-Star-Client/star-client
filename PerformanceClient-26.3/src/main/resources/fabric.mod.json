@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "performanceclient",
+  "version": "${version}",
+  "name": "Performance Client (working title)",
+  "description": "Experimental Fabric client / CPU rendering research and frame profiler. Experimental GPU replacement disabled.",
+  "authors": [
+    "PerformanceClient Contributors"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.performanceclient.PerformanceClient"
+    ]
+  },
+  "mixins": [
+    "performanceclient.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

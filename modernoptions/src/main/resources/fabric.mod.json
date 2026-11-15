@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "modernoptions",
+  "version": "${version}",
+  "name": "Modern Options",
+  "description": "Stellt Options-, Music-&-Sounds-, Skin-Customization-, Online-Options-, Controls- und Mouse-Settings-Menue im Stil des Game-Menues dar (runde Buttons, 2px Rand, Glas-Panel).",
+  "environment": "client",
+  "entrypoints": { "client": [ "de.modernoptions.ModernOptionsClient" ] },
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "26.3",
+    "fabric-api": "*"
+  }
+}
