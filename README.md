@@ -9,10 +9,10 @@ Sammlung von drei Fabric-Projekten für **Minecraft Java 26.3**: ein experimente
 | Ordner | Mod-ID | Beschreibung | Stand |
 |---|---|---|---|
 | [`PerformanceClient-26.3/`](PerformanceClient-26.3) | `performanceclient` | Performance-Client mit Glas-Menüs, FPS-HUD, Profiling (F8/F9) und dem Forschungs-Renderer AASR | `0.2.0-alpha`, source-only |
-| [`modernoptions/`](modernoptions) | `modernoptions` | „Modern Options" — Options-, Music-&-Sounds-, Controls-, Skin- und Mouse-Menü im Glas-Design | `1.5.0` |
-| [`modernstats/`](modernstats) | `modernstats` | „Modern Statistics" — Statistik-Menü im Glas-Design | `1.0.0` |
+| [`PerformanceClient-26.3/modernoptions/`](PerformanceClient-26.3/modernoptions) | `modernoptions` | „Modern Options" — Options-, Music-&-Sounds-, Controls-, Skin- und Mouse-Menü im Glas-Design | `1.5.0` |
+| [`PerformanceClient-26.3/modernstats/`](PerformanceClient-26.3/modernstats) | `modernstats` | „Modern Statistics" — Statistik-Menü im Glas-Design | `1.0.0` |
 
-Zusätzlich liegen im Wurzelverzeichnis die ZIP-Snapshots `PerformanceClient-26_3-macOS.zip`, `modernoptions.zip` und `modernstats.zip` (Stand der jeweiligen Ordner zum Packzeitpunkt).
+Zusätzlich liegen im Wurzelverzeichnis die ZIP-Snapshots `PerformanceClient-26_3-macOS.zip`, `modernoptions.zip` und `modernstats.zip` (Stand zum Packzeitpunkt; die beiden Mod-ZIPs enthalten noch die alte Ordnerstruktur).
 
 ## Voraussetzungen
 
@@ -31,16 +31,17 @@ cd PerformanceClient-26.3
 bash scripts/macos/install-gradle-9.7.1.sh   # einmalig, legt .local-tools/gradle-9.7.1 an
 bash scripts/macos/build.sh
 
-cd ../modernoptions && bash scripts/macos/build.sh
-cd ../modernstats   && bash scripts/macos/build.sh
+cd modernoptions && bash scripts/macos/build.sh
+cd ../modernstats && bash scripts/macos/build.sh
 ```
 
 **Allgemein (eigener Gradle- bzw. Wrapper-Aufruf):**
 
 ```bash
-cd modernoptions && ./gradlew build
-cd ../modernstats && ./gradlew build
-cd ../PerformanceClient-26.3 && gradle build
+# aus dem Repository-Wurzelverzeichnis
+(cd PerformanceClient-26.3/modernoptions && ./gradlew build)
+(cd PerformanceClient-26.3/modernstats   && ./gradlew build)
+(cd PerformanceClient-26.3               && gradle build)
 ```
 
 Der Performance-Client hat derzeit **keinen** Gradle-Wrapper; dort wird ein installiertes `gradle` erwartet (siehe [SOURCE_REQUEST.md](PerformanceClient-26.3/SOURCE_REQUEST.md)).
